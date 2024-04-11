@@ -23,4 +23,4 @@ Options selected:
 * entered path/to/bq/keyfile.json **must enter full path, `~` did not work** see the screenshot in [step 4](https://docs.getdbt.com/guides/manual-install?step=4)
 * entered project, dataset, threads, timeout, and lcation
 
-> Tutorial differs, you have to create your own 
+> Tutorial differs, you don't have to create your own `profiles.yml` file. The `init` command took care of that.
