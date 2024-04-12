@@ -36,4 +36,11 @@ Create customers.sql model
 
 **NOTE:** After the first created customer table, `dbt run` threw an error because customers existed as table. Then, after updating `customers.sql` with refs to the stg tables, `dbt run` did not need a `--full-refresh` to update the view into a table.
 
+### Other activity
+* group stg_ models in a subdir,
+* update config to run them as views
+* run only the staging subdir
 
+```
+dbt run --full-refresh --select "models/staging"
+```
