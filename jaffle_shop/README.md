@@ -16,7 +16,7 @@ Try running the following commands:
 
 [https://docs.getdbt.com/guides/manual-install?step=1](https://docs.getdbt.com/guides/manual-install?step=1)
 
-### Notes
+## Notes
 #### Pre-reqs:
 * Install dbt along with package.
 * Create a project and set it up in GCP (credentials, load data, etc..)
@@ -42,7 +42,7 @@ Options selected:
 
 Check that `dbt run` works with the examples
 
-### Building First Models
+#### Building First Models
 Create a new branch
 
 Create customers.sql model
@@ -51,7 +51,7 @@ Create customers.sql model
 
 **NOTE:** After the first created customer table, `dbt run` threw an error because customers existed as table. Then, after updating `customers.sql` with refs to the stg tables, `dbt run` did not need a `--full-refresh` to update the view into a table.
 
-### Other activity
+#### Other activity
 * group stg_ models in a subdir,
 * update config to run them as views
 * run only the staging subdir
@@ -59,3 +59,7 @@ Create customers.sql model
 ```
 dbt run --full-refresh --select "models/staging"
 ```
+### Add tests
+Create `schema.yml`
+* contains tests and documentation
+* `dbt docs generate` and `dbt docs serve`
