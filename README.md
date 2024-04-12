@@ -28,3 +28,12 @@ Options selected:
 Check that `dbt run` works with the examples
 
 ### Building First Models
+Create a new branch
+
+Create customers.sql model
+
+`dbt run`
+
+**NOTE:** After the first created customer table, `dbt run` threw an error because customers existed as table. Then, after updating `customers.sql` with refs to the stg tables, `dbt run` did not need a `--full-refresh` to update the view into a table.
+
+
